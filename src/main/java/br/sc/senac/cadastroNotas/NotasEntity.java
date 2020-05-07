@@ -9,7 +9,10 @@ import javax.persistence.Id;
 @Entity(name = "Notas")
 final class NotasEntity implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8326061886992404496L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
