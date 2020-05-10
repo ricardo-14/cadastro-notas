@@ -53,7 +53,7 @@ public class CursoService {
 		return new ResponseEntity<>(removedCurso, HttpStatus.OK);
 	}
 
-	@PutMapping("/{id}")
+	@PutMapping("/att/{id}")
 	public ResponseEntity<CursoDTO> updateCurso(@PathVariable final Long id, @RequestBody final CursoDTO curso) {
 		final CursoDTO oldCurso = this.cursoController.updateCurso(id, curso);
 		if (oldCurso.equals(CursoDTO.NULL_VALUE)) {
@@ -62,7 +62,7 @@ public class CursoService {
 		return new ResponseEntity<>(oldCurso, HttpStatus.OK);
 	}
 
-	@PostMapping
+	@PostMapping("/add")
 	public Long insertCurso(@RequestBody final CursoDTO curso) {
 		return this.cursoController.insertCurso(curso);
 	}

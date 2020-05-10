@@ -22,8 +22,10 @@ final class AvaliacaoEntity implements Serializable {
 	private String tituloAvaliacao;
 	private String descricaoAvaliacao;
 	private String dataAvaliacao;
-	// private java.Util.Set<NotasEntity>;
-	// private java.Util.Set<CursoEntity>;
+	private NotaEntity nota;
+	private CursoEntity curso;
+	//private Set<NotaEntity> notas;
+	//private Set<CursoEntity> cursos;
 
 	protected AvaliacaoEntity() {
 	}
@@ -40,7 +42,7 @@ final class AvaliacaoEntity implements Serializable {
 				+ ", descricaoAvaliacao=" + this.descricaoAvaliacao + ", dataAvaliacao=" + this.dataAvaliacao + "]";
 	}
 
-	public long getavaliacaoId() {
+	public Long getavaliacaoId() {
 		return this.avaliacaoId;
 	}
 
@@ -71,6 +73,28 @@ final class AvaliacaoEntity implements Serializable {
 	public void setdataAvaliacao(final String dataAvaliacao) {
 		if (dataAvaliacao != null) {
 			this.dataAvaliacao = dataAvaliacao;
+		}
+	}
+
+	public NotaEntity getNota() {
+		return nota;
+	}
+
+	public void setNota(NotaEntity nota) {
+		if (nota != null) {
+			this.nota = nota;
+
+		}
+	}
+
+	public CursoEntity getCurso() {
+		return curso;
+	}
+
+	public void setCurso(CursoEntity curso) {
+		if (curso != null) {
+			this.curso = curso;
+
 		}
 	}
 

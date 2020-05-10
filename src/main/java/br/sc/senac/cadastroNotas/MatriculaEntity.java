@@ -49,7 +49,7 @@ final class MatriculaEntity implements Serializable {
 		}
 	}
 
-	public CursoEntity getCursos() {
+	public CursoEntity getCurso() {
 		return curso;
 	}
 

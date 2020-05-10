@@ -53,7 +53,7 @@ public class MatriculaService {
 		return new ResponseEntity<>(removedMatricula, HttpStatus.OK);
 	}
 
-	@PutMapping("/{id}")
+	@PutMapping("/att/{id}")
 	public ResponseEntity<MatriculaDTO> updateMatricula(@PathVariable final Long id, @RequestBody final MatriculaDTO matricula) {
 		final MatriculaDTO oldMatricula = this.matriculaController.updateMatricula(id, matricula);
 		if (oldMatricula.equals(MatriculaDTO.NULL_VALUE)) {
@@ -62,7 +62,7 @@ public class MatriculaService {
 		return new ResponseEntity<>(oldMatricula, HttpStatus.OK);
 	}
 
-	@PostMapping
+	@PostMapping("/add")
 	public Long insertMatricula(@RequestBody final MatriculaDTO matricula) {
 		return this.matriculaController.insertMatricula(matricula);
 	}

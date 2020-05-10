@@ -20,7 +20,10 @@ final class NotaEntity implements Serializable {
 	private Long notaId;
 	
 	private Double nota;
-	// private java.Util.Set<AlunoEntity>;
+	private AlunoEntity aluno;
+	// private Set<AlunoEntity> aluno;
+
+	
 	
 	protected NotaEntity() {
 	}
@@ -34,7 +37,7 @@ final class NotaEntity implements Serializable {
 		return "NotaEntity [notaId=" + this.notaId + ", nota=" + this.nota + "]";
 	}
 	
-	public long getnotaId() {
+	public Long getnotaId() {
 		return this.notaId;
 	}
 
@@ -45,6 +48,17 @@ final class NotaEntity implements Serializable {
 	public void setnota(final Double nota) {
 		if (nota != null) {
 			this.nota = nota;
+		}
+	}
+
+	public AlunoEntity getAluno() {
+		return aluno;
+	}
+
+	public void setAluno(AlunoEntity aluno) {
+		if (aluno != null) {
+			this.aluno = aluno;
+
 		}
 	}
 }

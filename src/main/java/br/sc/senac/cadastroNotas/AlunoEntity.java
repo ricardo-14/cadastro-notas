@@ -21,7 +21,9 @@ final class AlunoEntity implements Serializable {
 	
 	private String nomeAluno;
 	private String cpf;
-	// private java.Util.Set<MatriculaEntity>;
+	private MatriculaEntity matricula;
+	//private Set<MatriculaEntity> matriculas;
+	
 	
 	protected AlunoEntity() {
 	}
@@ -36,7 +38,7 @@ final class AlunoEntity implements Serializable {
 		return "AlunoEntity [alunoId=" + this.alunoId  + ", nomeAluno=" + this.nomeAluno + ",cpf=" + this.cpf + "]";
 	}
 
-	public long getalunoId() {
+	public Long getalunoId() {
 		return this.alunoId;
 	}
 
@@ -57,6 +59,17 @@ final class AlunoEntity implements Serializable {
 	public void setcpf(final String cpf) {
 		if (cpf != null) {
 			this.cpf = cpf;
+		}
+	}
+
+	public MatriculaEntity getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(MatriculaEntity matricula) {
+		if (matricula != null) {
+			this.matricula = matricula;
+
 		}
 	}
 }
