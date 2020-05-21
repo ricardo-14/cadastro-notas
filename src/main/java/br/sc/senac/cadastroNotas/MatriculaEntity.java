@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity(name = "Matricula")
 final class MatriculaEntity implements Serializable {
 
@@ -18,7 +19,7 @@ final class MatriculaEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long matriculaId;
-
+	
 	private Long numeroMatricula;
 	private CursoEntity curso;
 	// private Set<CursoEntity> cursos;

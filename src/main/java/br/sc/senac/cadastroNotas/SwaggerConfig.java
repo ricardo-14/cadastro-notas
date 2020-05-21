@@ -26,8 +26,8 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiEndPointsInfo() {
-    	return new ApiInfoBuilder().title("Projeto Heroku")
-    			.description("Projeto de teste do swagger no heroku")
+    	return new ApiInfoBuilder().title("Projeto Sistema de Ensino ")
+    			.description("Projeto Integrador Sistema de Ensino ")
     			.license("Apache 2.0")
     			.licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
     			.version("1.0.0")

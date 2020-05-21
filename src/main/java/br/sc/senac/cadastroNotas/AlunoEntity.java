@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+
 @Entity(name = "Aluno")
 final class AlunoEntity implements Serializable {
 
@@ -17,8 +19,8 @@ final class AlunoEntity implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+
 	private Long alunoId;
-	
 	private String nomeAluno;
 	private String cpf;
 	private MatriculaEntity matricula;

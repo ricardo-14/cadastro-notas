@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 @Entity(name = "Avaliacao")
 final class AvaliacaoEntity implements Serializable {
 
@@ -18,7 +19,6 @@ final class AvaliacaoEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long avaliacaoId;
-
 	private String tituloAvaliacao;
 	private String descricaoAvaliacao;
 	private String dataAvaliacao;

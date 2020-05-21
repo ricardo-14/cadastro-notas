@@ -43,7 +43,7 @@ public class AlunoService {
 		return new ResponseEntity<>(aluno, HttpStatus.OK);
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/del/{id}")
 	public ResponseEntity<AlunoDTO> removeAluno(@PathVariable final Long id) {
 		final AlunoDTO removedAluno = this.alunoController.removeAluno(id);
 		if (removedAluno.equals(AlunoDTO.NULL_VALUE)) {

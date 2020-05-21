@@ -44,7 +44,7 @@ public class NotaService {
 		return new ResponseEntity<>(nota, HttpStatus.OK);
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/del/{id}")
 	public ResponseEntity<NotaDTO> removeNota(@PathVariable final Long id) {
 		final NotaDTO removedNota = this.notaController.removeNota(id);
 		if (removedNota.equals(NotaDTO.NULL_VALUE)) {

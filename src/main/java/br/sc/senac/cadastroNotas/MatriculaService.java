@@ -44,7 +44,7 @@ public class MatriculaService {
 		return new ResponseEntity<>(matricula, HttpStatus.OK);
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/del/{id}")
 	public ResponseEntity<MatriculaDTO> removeMatricula(@PathVariable final Long id) {
 		final MatriculaDTO removedMatricula = this.matriculaController.removeMatricula(id);
 		if (removedMatricula.equals(MatriculaDTO.NULL_VALUE)) {

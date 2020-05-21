@@ -44,7 +44,7 @@ public class AvaliacaoService {
 		return new ResponseEntity<>(avaliacao, HttpStatus.OK);
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/del/{id}")
 	public ResponseEntity<AvaliacaoDTO> removeAvaliacao(@PathVariable final Long id) {
 		final AvaliacaoDTO removedAvaliacao = this.avaliacaoController.removeAvaliacao(id);
 		if (removedAvaliacao.equals(AvaliacaoDTO.NULL_VALUE)) {

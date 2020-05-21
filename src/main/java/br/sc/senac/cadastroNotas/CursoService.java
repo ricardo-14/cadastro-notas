@@ -44,7 +44,7 @@ public class CursoService {
 		return new ResponseEntity<>(curso, HttpStatus.OK);
 	}
 
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/del/{id}")
 	public ResponseEntity<CursoDTO> removeCurso(@PathVariable final Long id) {
 		final CursoDTO removedCurso = this.cursoController.removeCurso(id);
 		if (removedCurso.equals(CursoDTO.NULL_VALUE)) {
